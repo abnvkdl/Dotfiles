@@ -1,0 +1,124 @@
+configuration {
+  display-drun: "";
+  display-window: "Windows:";
+  drun-display-format: "{name}";
+  font: "JetBrainsMono Nerd Font Regular 10";
+  modi: "window,run,drun";
+  show-icons: true;
+  icon-theme: "Papirus";
+  matching: "fuzzy";
+
+}
+
+@theme "/dev/null"
+@import "./config/colors.rasi"
+
+
+* {
+    background-color:   transparent;
+    text-color: @FG;
+}
+
+window {
+    location:			center;
+    width:			350;
+    border:			2px;
+    border-color:		@BGA;
+    border-radius:		17px;
+    background-color:		@BG;
+}
+
+mainbox {
+    children:			[inputbar, listview];
+    padding:			10px;
+}
+
+inputbar {
+    children:			[ textbox-prompt-colon, prompt, entry ];
+    background-color:		transparent;
+    text-color:			@FG;
+    expand:			false;
+    border:			0px 0px 0px 0px;
+    border-radius:		0px;
+    border-color:		@BDR;
+    margin:			0px 0px 0px 0px;
+    padding:			0px;
+    position:			center;
+}
+
+textbox-prompt-colon {
+    expand:			false;
+    str:			"";
+    border-radius:		100%;
+    background-color:		transparent;
+    text-color:			@FG;
+    padding:			8px 12px 8px 12px;
+}
+
+prompt {
+    enabled:			true;
+    padding:			8px 15px 8px 5px;
+    background-color:		transparent;
+    text-color:			@IMG;
+}
+
+entry {
+    background-color:		@SEL;
+    text-color:			@FG;
+    placeholder-color:		@SEL;
+    expand:			true;
+    horizontal-align:		0;
+    placeholder:		" Enter";
+    blink:			true;
+    border:			2px;
+    border-color:		@BGA;
+    border-radius:		10px;
+    padding:			8px;
+}
+
+
+textbox {
+    padding:			8px 24px;
+}
+
+listview {
+    background-color:		transparent;
+    margin:			10 0 5 0;
+    lines:			5;
+    columns:    		1;
+    spacing:			6px;
+    layout:			vertical;
+    fixed-height: 		false; //true if you don't want a fixed height for launcher...but if true...it may go a little down
+                        //it may be annoying sometimes.
+}
+
+element {
+    orientation: horizontal;
+    padding:			5px 10px 5px 10px;
+    border-radius:		10px;
+    background-color:		@SEL;
+    text-color:			@FG;
+}
+
+element normal active {
+    text-color:			@BDR;
+}
+
+element selected normal, element selected active {
+    background-color:		@BGA;
+    text-color:			@BG;
+}
+
+element-icon {
+    size:			1.8em;
+    vertical-align:		0.5;
+    margin:			0px 10px 0px 5px;
+}
+
+element-text {
+    expand: true;
+    text-color:			inherit;
+    vertical-align:		0.5;
+
+
+}
