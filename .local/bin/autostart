@@ -1,5 +1,4 @@
 #!/bin/bash
 xsetroot -cursor_name left_ptr &
-picom --experimental-backends &
 nitrogen --restore &
 
