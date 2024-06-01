@@ -1,5 +1,9 @@
  
 
+https://github.com/abnvkdl/dotfiles/assets/98605298/57ca2c93-5dab-477d-bd9b-ca742b261d79
+
+
+
 ### Programs or dependencies needed
 `bspwm sxhkd alacritty rofi nitrogen firefox maim xdotool curl git vim`  
 
