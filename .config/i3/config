@@ -61,8 +61,8 @@ assign [class="Mousepad"] $ws4
 assign [class="TelegramDesktop"] $ws5
 
 # extra window rules
-for_window [urgent="latest" class="org.mozilla.firefox"] focus
-for_window [urgent="latest" class="Mousepad"] focus
+#for_window [urgent="latest" class="org.mozilla.firefox"] focus
+for_window [urgent="latest" class="*"] focus
 
 # change focus
 bindsym $mod+Left focus left
