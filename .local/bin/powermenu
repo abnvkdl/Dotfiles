@@ -5,10 +5,10 @@ uptime=$(uptime -p | sed -e 's/up //g')
 
 # Options
 if [[ "$DIR" == "powermenus" ]]; then
-	shutdown="󰤆"
+	shutdown="󰐥"
 	reboot=""
 	lock=""
-	logout=""
+	logout="󰍃"
 	ddir="$HOME/.config/rofi/config"
 else
 	# Buttons
@@ -16,10 +16,10 @@ else
 	if [[ "$layout" == "TRUE" ]]; then
   # Section 1
 
-		shutdown="󰤆"
+		shutdown="󰐥"
 		reboot=""
 		suspend="󰤄"
-		logout=""
+		logout="󰍃"
 
 	else
   # Section 1
@@ -39,7 +39,7 @@ case $chosen in
     $shutdown) systemctl poweroff ;;
     $reboot) systemctl reboot ;;
     $suspend) systemctl suspend ;;
-    $logout) bspc quit ;;
+    $logout) i3-msg exit ;;
     *) exit 1 ;;
 esac
 
